@@ -11,7 +11,7 @@
         "projectName": "Landing.BLL",
         "projectPath": "C:\\Users\\Saif\\Desktop\\full stack\\back end\\MVC\\project\\landing.PL\\Landing.BLL\\Landing.BLL.csproj",
         "packagesPath": "C:\\Users\\Saif\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Saif\\Desktop\\full stack\\back end\\MVC\\project\\Landing.PL\\Landing.BLL\\obj\\",
+        "outputPath": "C:\\Users\\Saif\\Desktop\\full stack\\back end\\MVC\\project\\landing.PL\\Landing.BLL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Saif\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -70,7 +70,7 @@
         "projectName": "Landing.DAL",
         "projectPath": "C:\\Users\\Saif\\Desktop\\full stack\\back end\\MVC\\project\\landing.PL\\Landing.DAL\\Landing.DAL.csproj",
         "packagesPath": "C:\\Users\\Saif\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Saif\\Desktop\\full stack\\back end\\MVC\\project\\Landing.PL\\Landing.DAL\\obj\\",
+        "outputPath": "C:\\Users\\Saif\\Desktop\\full stack\\back end\\MVC\\project\\landing.PL\\Landing.DAL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Saif\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -98,6 +98,22 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

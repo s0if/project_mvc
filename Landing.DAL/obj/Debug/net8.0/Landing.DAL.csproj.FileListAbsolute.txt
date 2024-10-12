@@ -10,3 +10,6 @@ C:\Users\Saif\Desktop\full stack\back end\MVC\project\Landing.PL\Landing.DAL\obj
 C:\Users\Saif\Desktop\full stack\back end\MVC\project\Landing.PL\Landing.DAL\obj\Debug\net8.0\refint\Landing.DAL.dll
 C:\Users\Saif\Desktop\full stack\back end\MVC\project\Landing.PL\Landing.DAL\obj\Debug\net8.0\Landing.DAL.pdb
 C:\Users\Saif\Desktop\full stack\back end\MVC\project\Landing.PL\Landing.DAL\obj\Debug\net8.0\ref\Landing.DAL.dll
+C:\Users\Saif\Desktop\full stack\back end\MVC\project\landing.PL\Landing.DAL\obj\Debug\net8.0\Landing.DAL.csproj.AssemblyReference.cache
+C:\Users\Saif\Desktop\full stack\back end\MVC\project\Landing.PL\Landing.DAL\bin\Debug\net8.0\Landing.DAL.runtimeconfig.json
+C:\Users\Saif\Desktop\full stack\back end\MVC\project\Landing.PL\Landing.DAL\obj\Debug\net8.0\Landing.DAL.genruntimeconfig.cache

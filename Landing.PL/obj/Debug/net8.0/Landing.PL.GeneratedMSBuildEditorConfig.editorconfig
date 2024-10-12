@@ -26,8 +26,24 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Saif\Desktop\full stack\back end\MVC\project\landing.PL\Landing.PL
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Saif/Desktop/full stack/back end/MVC/project/landing.PL/Landing.PL/Areas/Dashbord/Views/Category/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRGFzaGJvcmRcVmlld3NcQ2F0ZWdvcnlcSW5kZXguY3NodG1s
+[C:/Users/Saif/Desktop/full stack/back end/MVC/project/landing.PL/Landing.PL/Areas/Dashbord/Views/Building/create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRGFzaGJvcmRcVmlld3NcQnVpbGRpbmdcY3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Saif/Desktop/full stack/back end/MVC/project/landing.PL/Landing.PL/Areas/Dashbord/Views/Building/delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRGFzaGJvcmRcVmlld3NcQnVpbGRpbmdcZGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Saif/Desktop/full stack/back end/MVC/project/landing.PL/Landing.PL/Areas/Dashbord/Views/Building/details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRGFzaGJvcmRcVmlld3NcQnVpbGRpbmdcZGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Saif/Desktop/full stack/back end/MVC/project/landing.PL/Landing.PL/Areas/Dashbord/Views/Building/edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRGFzaGJvcmRcVmlld3NcQnVpbGRpbmdcZWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Saif/Desktop/full stack/back end/MVC/project/landing.PL/Landing.PL/Areas/Dashbord/Views/Building/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRGFzaGJvcmRcVmlld3NcQnVpbGRpbmdcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Saif/Desktop/full stack/back end/MVC/project/landing.PL/Landing.PL/Areas/Dashbord/Views/Shared/_controlSidebar.cshtml]

@@ -1,0 +1,70 @@
+﻿       @model IEnumerable<BuildingVM>
+@{
+    ViewData["Title"] = "Index";
+}
+             @section Header{
+          Index
+             }
+<div class="col-md-12">
+<div class="card">
+    <div class="card-header">
+        <h3 class="card-title">Building</h3>
+    </div>
+
+    <div class="card-body">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th style="width: 10px">DetailsBuilding</th>
+                        <th>Price</th>
+                        <th>Action</th>
+                       @*  <th>Bedrooms</th>
+                        <th>bathrooms</th>
+                        <th>Area</th>
+                        <th>Floor</th>
+                        <th>Parking</th>
+                        <th>siDeleted</th>
+                        <th>CreatedAt</th> *@
+
+                </tr>
+            </thead>
+            <tbody>
+                    @foreach(var item in Model)
+                    {
+                        <tr>
+                            <td>@item.DetailsBuilding</td>
+                            <td>$@item.Price</td>
+                            <td>
+                                <a asp-controller="Building" asp-action="details" asp-route-id="@item.Id" class="btn btn-info">Details</a>
+                                <a asp-controller="Building" asp-action="delete" asp-route-id="@item.Id" class="btn btn-danger">Delete</a>
+                                <a asp-controller="Building" asp-action="edit" asp-route-id="@item.Id" class="btn btn-warning">Edit</a>
+
+                            </td>
+                           @*  <td>@item.Bedrooms</td>
+                            <td>@item.bathrooms</td>
+                            <td>@item.Area m&sup2</td>
+                            <td>@item.Floor</td>
+                            <td>@item.Parking car</td>
+                            <td>@item.siDeleted</td>
+                            <td>@item.CreatedAt</td> *@
+                        </tr>
+                    }
+                   
+                
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card-footer clearfix">
+            <a asp-controller="Building" asp-action="create"  class="btn btn-success">Create Building</a>
+        <ul class="pagination pagination-sm m-0 float-right">
+            <li class="page-item"><a class="page-link" href="#">«</a></li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">»</a></li>
+        </ul>
+    </div>
+</div>
+</div>
+
