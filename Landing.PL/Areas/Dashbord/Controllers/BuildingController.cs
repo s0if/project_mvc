@@ -2,6 +2,7 @@
 using Landing.DAL.Data;
 using Landing.DAL.Models;
 using Landing.PL.Areas.Dashbord.ViewModels;
+using Landing.PL.Helpers;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -13,7 +14,7 @@ namespace Landing.PL.Areas.Dashbord.Controllers
         private readonly ApplicationDbContext context;
         private readonly IMapper mapper;
 
-        public BuildingController(ApplicationDbContext context,IMapper mapper)
+        public BuildingController(ApplicationDbContext context, IMapper mapper)
         {
             this.context = context;
             this.mapper = mapper;
@@ -34,72 +35,82 @@ namespace Landing.PL.Areas.Dashbord.Controllers
         {
             if (ModelState.IsValid)
             {
+                VM.Imageaname = FileSetting.uploadFile(VM.image, "Images");
                 var building = mapper.Map<Building>(VM);
                 context.Add(building);
                 context.SaveChanges();
                 return RedirectToAction(nameof(Index));
             }
             return View(VM);
+
+
         }
         [HttpGet]
         public IActionResult details(Guid id)
         {
-            var details =context.Buildings.Find(id);
+            var details = context.Buildings.Find(id);
             if (details == null)
             {
                 return NotFound();
             }
-            return View(mapper.Map<BuildingDetailsVM>( details));
+            return View(mapper.Map<BuildingDetailsVM>(details));
 
         }
         [HttpGet]
         public IActionResult edit(Guid id)
         {
-          var building=context.Buildings.Find(id);
-            if(building == null)
+            var building = context.Buildings.Find(id);
+            if (building == null)
             {
                 return NotFound();
             }
+
             return View(mapper.Map<BuildingFormVM>(building));
         }
-        [HttpPost,ActionName ("edit")]
+        [HttpPost, ActionName("edit")]
         [ValidateAntiForgeryToken]
         public IActionResult edit(BuildingFormVM VM)
         {
-            if(ModelState.IsValid)
+            if (ModelState.IsValid)
             {
                 var isbuilding = context.Buildings.Find(VM.Id);
 
+
                 if (isbuilding is not null)
                 {
+                    string newFilename = FileSetting.updateFie(VM.image, "Images", isbuilding.Imageaname);
+                    isbuilding.Imageaname = newFilename;
                     var building = mapper.Map(VM, isbuilding);
                     context.SaveChanges();
                     return RedirectToAction(nameof(Index));
                 }
                 return NotFound();
             }
-            
+
             return View(VM);
         }
         [HttpGet]
-        public IActionResult delete(Guid id) 
-        {
-            var deleteBuilding=context.Buildings.Find(id);
-            return View(mapper.Map<BuildingVM>(deleteBuilding));
+        //public IActionResult delete(Guid id)
+        //{
+        //    var deleteBuilding = context.Buildings.Find(id);
+        //    return View(mapper.Map<BuildingVM>(deleteBuilding));
 
-        }
-        [HttpPost,ActionName("delete")]
-        [ValidateAntiForgeryToken]
-        public IActionResult deleteconfoirm(Guid id)
+        //}
+        [HttpPost]
+        //[ValidateAntiForgeryToken]
+        public IActionResult delete(Guid id)
         {
             var deleteBuilding = context.Buildings.Find(id);
-           if (deleteBuilding is not null)
+
+            if (deleteBuilding is not null)
             {
-                context.Remove(deleteBuilding);
+                FileSetting.deleteFile("Images", deleteBuilding.Imageaname);
+                context.Buildings.Remove(deleteBuilding);
                 context.SaveChanges();
-                return RedirectToAction(nameof(Index));
+                return Ok(new {messege="building is deleted" });
+
             }
-            return RedirectToAction(nameof(Index));
+            return Ok();
 
         }
 

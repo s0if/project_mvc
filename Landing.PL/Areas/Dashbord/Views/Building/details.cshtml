@@ -24,7 +24,7 @@
                     }
 
                 </div>
-                
+
 
                 <thead>
                     <tr>
@@ -35,12 +35,13 @@
                         <th>Area</th>
                         <th>Floor</th>
                         <th>Parking</th>
-                        <th>CreatedAt</th> 
+                        <th>CreatedAt</th>
+                        <th>Image</th>
 
                     </tr>
                 </thead>
                 <tbody>
-                    <tr> 
+                    <tr>
                         <td>@Model.DetailsBuilding</td>
                         <td>$@Model.Price</td>
                         <td>@Model.Bedrooms</td>
@@ -48,8 +49,11 @@
                         <td>@Model.Area m&sup2</td>
                         <td>@Model.Floor</td>
                         <td>@Model.Parking car</td>
-                        <td>@Model.CreatedAt</td> 
-                        </tr>
+                        <td>@Model.CreatedAt</td>
+                        <td>
+                            <img src="~/files/images/@Model.Imageaname" class="h-25 w-25" />
+                        </td>
+                    </tr>
 
 
                 </tbody>
@@ -57,6 +61,8 @@
         </div>
 
         <div class="card-footer clearfix">
+            <a asp-controller="building" asp-action="index" class="btn btn-primary">Return to Home</a>
+
             <ul class="pagination pagination-sm m-0 float-right">
                 <li class="page-item"><a class="page-link" href="#">«</a></li>
                 <li class="page-item"><a class="page-link" href="#">1</a></li>

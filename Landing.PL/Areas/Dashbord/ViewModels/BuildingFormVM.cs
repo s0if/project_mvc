@@ -13,5 +13,7 @@ namespace Landing.PL.Areas.Dashbord.ViewModels
         public int Floor { get; set; }
         public int Parking { get; set; }
         public bool siDeleted { get; set; }
+        public IFormFile image { get; set; }
+        public string? Imageaname { get; set; }
     }
 }

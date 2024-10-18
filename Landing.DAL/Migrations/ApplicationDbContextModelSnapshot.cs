@@ -4,19 +4,16 @@ using Landing.DAL.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
-using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace Landing.PL.Data.Migrations
+namespace Landing.DAL.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20241011160545_initial")]
-    partial class initial
+    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
     {
-        /// <inheritdoc />
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
+        protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -46,6 +43,10 @@ namespace Landing.PL.Data.Migrations
 
                     b.Property<int>("Floor")
                         .HasColumnType("int");
+
+                    b.Property<string>("Imageaname")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Parking")
                         .HasColumnType("int");

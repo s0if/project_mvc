@@ -4,15 +4,17 @@ This is a starter template page. Use this page to start your new project from
 scratch. This page gets rid of all links and provides the needed markup only.
 -->
 <html lang="en">
-<partial name="_head.cshtml"/>
+<partial name="_head.cshtml" />
+
+@RenderSection("style", required: false)
 <body class="hold-transition sidebar-mini">
     <div class="wrapper">
 
         <!-- Navbar -->
-            <partial name="_navbar.cshtml"/>
+        <partial name="_navbar.cshtml" />
         <!-- /.navbar -->
         <!-- Main Sidebar Container -->
-       <partial name="_sidebar" />
+        <partial name="_sidebar" />
 
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
@@ -48,10 +50,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <partial name="_controlSidebar" />
         <!-- /.control-sidebar -->
         <!-- Main Footer -->
-       <partial name="_footer"/>
+        <partial name="_footer" />
     </div>
     <!-- ./wrapper -->
     <!-- REQUIRED SCRIPTS -->
-     <partial name="_script"/> 
+    <partial name="_script" />
+    @RenderSection("script", required: false)
 </body>
 </html>

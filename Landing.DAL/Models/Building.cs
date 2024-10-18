@@ -18,5 +18,6 @@ namespace Landing.DAL.Models
         public int Parking { get; set; }
         public bool siDeleted { get; set; } = false;
         public DateTime CreatedAt { get; set; }= DateTime.Now;
+        public string Imageaname { get; set; }
     }
 }
