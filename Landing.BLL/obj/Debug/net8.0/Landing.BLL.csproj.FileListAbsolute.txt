@@ -1,0 +1,16 @@
+C:\Users\Saif\Desktop\full stack\back end\MVC\project\Landing.PL\Landing.BLL\bin\Debug\net8.0\Landing.BLL.deps.json
+C:\Users\Saif\Desktop\full stack\back end\MVC\project\Landing.PL\Landing.BLL\bin\Debug\net8.0\Landing.BLL.dll
+C:\Users\Saif\Desktop\full stack\back end\MVC\project\Landing.PL\Landing.BLL\bin\Debug\net8.0\Landing.BLL.pdb
+C:\Users\Saif\Desktop\full stack\back end\MVC\project\Landing.PL\Landing.BLL\bin\Debug\net8.0\Landing.DAL.dll
+C:\Users\Saif\Desktop\full stack\back end\MVC\project\Landing.PL\Landing.BLL\bin\Debug\net8.0\Landing.DAL.pdb
+C:\Users\Saif\Desktop\full stack\back end\MVC\project\Landing.PL\Landing.BLL\obj\Debug\net8.0\Landing.BLL.csproj.AssemblyReference.cache
+C:\Users\Saif\Desktop\full stack\back end\MVC\project\Landing.PL\Landing.BLL\obj\Debug\net8.0\Landing.BLL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Saif\Desktop\full stack\back end\MVC\project\Landing.PL\Landing.BLL\obj\Debug\net8.0\Landing.BLL.AssemblyInfoInputs.cache
+C:\Users\Saif\Desktop\full stack\back end\MVC\project\Landing.PL\Landing.BLL\obj\Debug\net8.0\Landing.BLL.AssemblyInfo.cs
+C:\Users\Saif\Desktop\full stack\back end\MVC\project\Landing.PL\Landing.BLL\obj\Debug\net8.0\Landing.BLL.csproj.CoreCompileInputs.cache
+C:\Users\Saif\Desktop\full stack\back end\MVC\project\Landing.PL\Landing.BLL\obj\Debug\net8.0\Landing.BLL.sourcelink.json
+C:\Users\Saif\Desktop\full stack\back end\MVC\project\Landing.PL\Landing.BLL\obj\Debug\net8.0\Landing.BLL.csproj.CopyComplete
+C:\Users\Saif\Desktop\full stack\back end\MVC\project\Landing.PL\Landing.BLL\obj\Debug\net8.0\Landing.BLL.dll
+C:\Users\Saif\Desktop\full stack\back end\MVC\project\Landing.PL\Landing.BLL\obj\Debug\net8.0\refint\Landing.BLL.dll
+C:\Users\Saif\Desktop\full stack\back end\MVC\project\Landing.PL\Landing.BLL\obj\Debug\net8.0\Landing.BLL.pdb
+C:\Users\Saif\Desktop\full stack\back end\MVC\project\Landing.PL\Landing.BLL\obj\Debug\net8.0\ref\Landing.BLL.dll

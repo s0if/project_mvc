@@ -1,0 +1,76 @@
+﻿       @model BuildingDetailsVM
+@{
+    ViewData["Title"] = "details";
+}
+@section Header {
+     details
+}
+<div class="col-md-12">
+    <div class="card">
+        <div class="card-header">
+            <h3 class="card-title">Building</h3>
+        </div>
+
+        <div class="card-body">
+            <table class="table table-bordered">
+                <div class=" border-bottom py-3">
+                    @if (Model.siDeleted)
+                    {
+                        <span class="bg-danger p-1 rounded">not active</span>
+                    }
+                    else
+                    {
+                        <span class="bg-success  p-1 rounded">active</span>
+                    }
+
+                </div>
+
+
+                <thead>
+                    <tr>
+                        <th style="width: 10px">DetailsBuilding</th>
+                        <th>Price</th>
+                        <th>Bedrooms</th>
+                        <th>bathrooms</th>
+                        <th>Area</th>
+                        <th>Floor</th>
+                        <th>Parking</th>
+                        <th>CreatedAt</th>
+                        <th>Image</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>@Model.DetailsBuilding</td>
+                        <td>$@Model.Price</td>
+                        <td>@Model.Bedrooms</td>
+                        <td>@Model.bathrooms</td>
+                        <td>@Model.Area m&sup2</td>
+                        <td>@Model.Floor</td>
+                        <td>@Model.Parking car</td>
+                        <td>@Model.CreatedAt</td>
+                        <td>
+                            <img src="~/files/images/@Model.Imageaname" class="h-25 w-25" />
+                        </td>
+                    </tr>
+
+
+                </tbody>
+            </table>
+        </div>
+
+        <div class="card-footer clearfix">
+            <a asp-controller="building" asp-action="index" class="btn btn-primary">Return to Home</a>
+
+            <ul class="pagination pagination-sm m-0 float-right">
+                <li class="page-item"><a class="page-link" href="#">«</a></li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">»</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
