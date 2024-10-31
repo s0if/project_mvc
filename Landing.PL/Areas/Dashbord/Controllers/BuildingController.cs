@@ -27,6 +27,7 @@ namespace Landing.PL.Areas.Dashbord.Controllers
         [HttpGet]
         public IActionResult create()
         {
+           
             return View();
         }
         [HttpPost]

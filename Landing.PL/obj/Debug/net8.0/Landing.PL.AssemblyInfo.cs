@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Landing.PL")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d1027283b6fe1c4e17a5733983b58998aef424d1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+48762c00975cfc66674fea0320ede031c07a5fc5")]
 [assembly: System.Reflection.AssemblyProductAttribute("Landing.PL")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Landing.PL")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
