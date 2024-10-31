@@ -3,7 +3,6 @@
 
 @section Header {
       create
-
 }
 <div class="col-md-12">
 
@@ -17,7 +16,7 @@
             <div class="card-body">
                 <div class="form-group">
                     <label asp-for="DetailsBuilding"></label>
-                    <input asp-for="DetailsBuilding " class="form-control">
+                    <input asp-for="DetailsBuilding" class="form-control">
                 </div>
                 <div class="form-group">
                     <label asp-for="Price"></label>
@@ -48,7 +47,7 @@
                     <input asp-for="image" class="form-control-file imageFile">
                 </div>
                 <div class="form-group">
-                    <img src="#" class="imagePreview h-25 w-25" style="display:none" />
+                    <img src="#" class="h-25 w-25 imagePreview " style="display:none" />
                 </div>
             </div>
 
@@ -60,23 +59,20 @@
     </div>
 </div>
 @section script {
-
     <script>
-       
-        var imageFile = document.querySelector(".imageFile");
-        imageFile.addEventListener("change", event => {
-            var imagePreview = document.querySelector(".imagePreview");
+        document.querySelector(".imageFile").addEventListener("change", event => {
             var file = event.target.files[0];
-            var read = new FileReader(file);
+            var imagePreview = document.querySelector(".imagePreview");
             if (file) {
-
-
-                read.readAsDataURL(file);
-                read.onload = e => {
+                var reader = new FileReader();
+                reader.onload = e => {
                     imagePreview.src = e.target.result;
-                    imagePreview.style.display = "block";
+                    imagePreview.style.display = "block"
                 }
+                reader.readAsDataURL(file);
             }
+
         })
     </script>
+
 }

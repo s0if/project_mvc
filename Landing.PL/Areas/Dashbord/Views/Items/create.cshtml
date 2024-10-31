@@ -1,4 +1,4 @@
-﻿							  @model ItemsFormVM
+﻿@model ItemsFormVM
 
 
 @section Header {
@@ -14,8 +14,8 @@
 
         <form asp-controller="Item" asp-action="create" enctype="multipart/form-data">
             <div class="card-body">
-
-
+               
+                
                 <div class="form-group">
                     <label asp-for="Name"></label>
                     <input asp-for="Name" class="form-control-file">
@@ -26,9 +26,9 @@
                 </div>
                 <div class="form-group">
                     <label asp-for="BuildingId">select building</label>
-                    <select asp-for="BuildingId" class="form-control-file" asp-items="Model.Buildings"></select>
-                </div>
-
+                    <select asp-for="BuildingId" class="form-control-file" asp-items="@(new SelectList(Model.Buildings,"Id","DetailsBuilding"))"></select>
+                </div> 
+              
             </div>
 
             <div class="card-footer ">
@@ -38,7 +38,7 @@
         </form>
     </div>
 </div>
-@section script {
+@section script{
     <script src="https://cdn.tiny.cloud/1/671fkpin3b88qxo7aralabun6jxieciyqdbfbs78mtam7nq7/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
 
     <script>
@@ -64,7 +64,6 @@
             exportpdf_converter_options: { 'format': 'Letter', 'margin_top': '1in', 'margin_right': '1in', 'margin_bottom': '1in', 'margin_left': '1in' },
             exportword_converter_options: { 'document': { 'size': 'Letter' } },
             importword_converter_options: { 'formatting': { 'styles': 'inline', 'resets': 'inline', 'defaults': 'inline', } },
-
         });
     </script>
 }

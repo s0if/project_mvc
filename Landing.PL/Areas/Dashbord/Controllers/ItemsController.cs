@@ -4,7 +4,6 @@ using Landing.DAL.Models;
 using Landing.PL.Areas.Dashbord.ViewModels;
 using Landing.PL.Helpers;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 
 namespace Landing.PL.Areas.Dashbord.Controllers
@@ -28,10 +27,9 @@ namespace Landing.PL.Areas.Dashbord.Controllers
         [HttpGet]
         public IActionResult create()
         {
-            var building = context.Buildings.ToList();
-            var VM = new ItemsFormVM ()
+            var VM = new ItemsFormVM()
             {
-                Buildings = new SelectList(building, "Id", "DetailsBuilding")  
+                Buildings = mapper.Map<IEnumerable<BuildingVM>>(context.Buildings.ToList())
             };
             return View(VM);
         }
