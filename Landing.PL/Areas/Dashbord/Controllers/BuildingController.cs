@@ -3,12 +3,14 @@ using Landing.DAL.Data;
 using Landing.DAL.Models;
 using Landing.PL.Areas.Dashbord.ViewModels;
 using Landing.PL.Helpers;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace Landing.PL.Areas.Dashbord.Controllers
 {
     [Area("Dashbord")]
+    [Authorize(Roles ="Admin,superAdmin")]
     public class BuildingController : Controller
     {
         private readonly ApplicationDbContext context;
